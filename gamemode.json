@@ -1,18 +1,74 @@
-// библиотека для работы со стандартными длинами матчей
-
-import { GameMode } from 'pixel_combats/room';
-
-// константы
-const PARAMETER_GAME_LENGTH = 'default_game_mode_length';
-
-// возвращает длину матча
-export function game_mode_length_seconds() {
-    const length = GameMode.Parameters.GetString(PARAMETER_GAME_LENGTH);
-    switch (length) {
-        case '1h': return 3600; // 4 min
-        case '2h': return 7200; // 5 min
-        case '3h': return 10800; // 6 min
-        case '5h': return 18000; // 7 min
+{
+  "Name": "TDM",
+  "Description": "Team Death Match Longer",
+  "StartClientVersion": 573,
+  "MapFilter": {
+    "IsBlank": false,
+    "HasParcourEnd": false
+  },
+  "MapLists": [
+    {
+      "MapListId": 324,
+      "Name": "Официальные карты"
+    },
+    {
+      "MapListId": 581
     }
-    return 300;
+  ],
+  "Parameters": {
+    "Bool": [
+      {
+        "Name": "MapRotation",
+        "DisplayName": "GmParams/MapRotation",
+        "Default": true,
+        "Order": 1
+      },
+      {
+        "Name": "OnlyKnives",
+        "DisplayName": "GmParams/OnlyKnives",
+        "Order": 2
+      },
+      {
+        "Name": "OnlyPlayerBlocksDmg",
+        "DisplayName": "GmParams/OnlyPlayerBlocksDmg",
+        "Order": 3
+      },
+      {
+        "Name": "LoosenBlocks",
+        "DisplayName": "GmParams/LoosenBlocks",
+        "Order": 4
+      },
+      {
+        "Name": "FriendlyFire",
+        "DisplayName": "GmParams/FriendlyFire",
+        "Order": 5
+      }
+    ],
+    "Dropdown": [
+      {
+        "Name": "default_game_mode_length",
+        "DisplayName": "GmParams/Length",
+        "Default": "1h",
+        "Order": 6,
+        "Variants": [
+          {
+            "Name": "1h",
+            "DisplayName": "GmParams/Length_S"
+          },
+          {
+            "Name": "2h",
+            "DisplayName": "GmParams/Length_M"
+          },
+          {
+            "Name": "3h",
+            "DisplayName": "GmParams/Length_L"
+          },
+          {
+            "Name": "5h",
+            "DisplayName": "GmParams/Length_XL"
+          }
+        ]
+      }
+    ]
+  }
 }
