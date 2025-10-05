@@ -1,0 +1,17 @@
+// библиотека для работы со стандартными длинами матчей
+import { GameMode } from 'pixel_combats/room';
+
+const PARAMETER_GAME_LENGTH = 'default_game_mode_length';
+
+// возвращает длину матча в секундах
+export function game_mode_length_seconds() {
+    const length = GameMode.Parameters.GetString(PARAMETER_GAME_LENGTH);
+    switch (length) {
+        case 'Length_S': return 600;    // 10 минут
+        case 'Length_M': return 1200;   // 20 минут
+        case 'Length_L': return 1800;   // 30 минут
+        case 'Length_XL': return 3600;  // 60 минут
+        case 'Length_Infinite': return 0; // 💫 бесконечное время
+        default: return 1200;           // по умолчанию 20 минут
+    }
+}
