@@ -1,36 +1,14 @@
 {
-  "Name": "TDM Longer",
-  "Description": "Team Death Match Longer (Infinite Time)",
+  "Name": "TDM Infinite",
+  "Description": "Team Death Match без ограничения по времени",
   "StartClientVersion": 573,
-  "MapFilter": {
-    "IsBlank": false,
-    "HasParcourEnd": false
-  },
   "MapLists": [
     {
       "MapListId": 324,
       "Name": "Официальные карты"
     }
   ],
-  "Parameters": {
-    "Bool": [
-      { "Name": "MapRotation", "DisplayName": "GmParams/MapRotation", "Default": true, "Order": 1 },
-      { "Name": "FriendlyFire", "DisplayName": "GmParams/FriendlyFire", "Order": 2 }
-    ],
-    "Dropdown": [
-      {
-        "Name": "default_game_mode_length",
-        "DisplayName": "GmParams/Length",
-        "Default": "∞",
-        "Order": 3,
-        "Variants": [
-          { "Name": "1h", "DisplayName": "GmParams/1h" },
-          { "Name": "2h", "DisplayName": "GmParams/2h" },
-          { "Name": "3h", "DisplayName": "GmParams/3h" },
-          { "Name": "5h", "DisplayName": "GmParams/5h" },
-          { "Name": "∞", "DisplayName": "GmParams/Infinite" }
-        ]
-      }
-    ]
-  }
+  "Scripts": [
+    "rooms/gamemode.js"
+  ]
 }
