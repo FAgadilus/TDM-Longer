@@ -1,6 +1,6 @@
 {
   "Name": "TDM Longer",
-  "Description": "Team Death Match Longer",
+  "Description": "Team Death Match Longer (Infinite Time)",
   "StartClientVersion": 573,
   "MapFilter": {
     "IsBlank": false,
@@ -17,56 +17,24 @@
   ],
   "Parameters": {
     "Bool": [
-      {
-        "Name": "MapRotation",
-        "DisplayName": "GmParams/MapRotation",
-        "Default": true,
-        "Order": 1
-      },
-      {
-        "Name": "OnlyKnives",
-        "DisplayName": "GmParams/OnlyKnives",
-        "Order": 2
-      },
-      {
-        "Name": "OnlyPlayerBlocksDmg",
-        "DisplayName": "GmParams/OnlyPlayerBlocksDmg",
-        "Order": 3
-      },
-      {
-        "Name": "LoosenBlocks",
-        "DisplayName": "GmParams/LoosenBlocks",
-        "Order": 4
-      },
-      {
-        "Name": "FriendlyFire",
-        "DisplayName": "GmParams/FriendlyFire",
-        "Order": 5
-      }
+      { "Name": "MapRotation", "DisplayName": "GmParams/MapRotation", "Default": true, "Order": 1 },
+      { "Name": "OnlyKnives", "DisplayName": "GmParams/OnlyKnives", "Order": 2 },
+      { "Name": "OnlyPlayerBlocksDmg", "DisplayName": "GmParams/OnlyPlayerBlocksDmg", "Order": 3 },
+      { "Name": "LoosenBlocks", "DisplayName": "GmParams/LoosenBlocks", "Order": 4 },
+      { "Name": "FriendlyFire", "DisplayName": "GmParams/FriendlyFire", "Order": 5 }
     ],
     "Dropdown": [
       {
         "Name": "default_game_mode_length",
         "DisplayName": "GmParams/Length",
-        "Default": "1h",
+        "Default": "∞",
         "Order": 6,
         "Variants": [
-          {
-            "Name": "1h",
-            "DisplayName": "GmParams/1h"
-          },
-          {
-            "Name": "2h",
-            "DisplayName": "GmParams/2h"
-          },
-          {
-            "Name": "3h",
-            "DisplayName": "GmParams/3h"
-          },
-          {
-            "Name": "5h",
-            "DisplayName": "GmParams/5h"
-          }
+          { "Name": "1h", "DisplayName": "GmParams/1h" },
+          { "Name": "2h", "DisplayName": "GmParams/2h" },
+          { "Name": "3h", "DisplayName": "GmParams/3h" },
+          { "Name": "5h", "DisplayName": "GmParams/5h" },
+          { "Name": "∞", "DisplayName": "GmParams/Infinite" }
         ]
       }
     ]
